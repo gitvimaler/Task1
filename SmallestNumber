@@ -1,0 +1,16 @@
+public class SmallestDigit {
+    public static void main(String[] args) {
+        int number = 100;
+        int smallest = 9; // Highest single digit, will be reduced
+
+        while (number > 0) {
+            int digit = number % 10;  // get last digit
+            if (digit < smallest) {
+                smallest = digit;
+            }
+            number = number / 10;  // remove last digit
+        }
+
+        System.out.println("The smallest digit is: " + smallest);
+    }
+}
